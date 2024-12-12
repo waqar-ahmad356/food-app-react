@@ -46,7 +46,7 @@ const Orders = () => {
  
   useEffect(() => {
     fetchAllOrders();
-  }, [token]);
+  }, []);
 
   return (
     <div className='px-[80px] mt-[60px]'>
