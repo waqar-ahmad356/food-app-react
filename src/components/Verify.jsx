@@ -14,7 +14,7 @@ const Verify = () => {
     const navigate=useNavigate();
 
     const verifyPayment=async()=>{
-        console.log(" verified token",token)
+        
         const response=await axios.post(url+"/api/order/verify",{success,orderId},{headers:{token}})
         
         if(response.data.success){

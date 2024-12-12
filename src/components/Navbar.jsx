@@ -19,8 +19,7 @@ const Navbar = () => {
   const token = localStorage.getItem("token");
     const role=localStorage.getItem("role")
     
-    console.log(token)
-    console.log(role)
+    
     
    useEffect(()=>{
     
