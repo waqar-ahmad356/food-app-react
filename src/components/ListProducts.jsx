@@ -13,7 +13,7 @@ const ListProduct = () => {
   const fetchList = async () => {
   
     try {
-      const response = await axios.get(`${url}/api/food/lists`,{headers:{token}});
+      const response = await axios.get(`${url}/api/food/lists`,{headers:{token,'ngrok-skip-browser-warning': 'true'}});
       if (response.data.success) {
         setList(response.data.data); 
       } else {
@@ -33,7 +33,7 @@ const ListProduct = () => {
   // Function to remove a food item
   const removeFood = async (foodId) => {
     try {
-      const response = await axios.post(`${url}/api/food/remove`, { id: foodId },{headers:{token}});
+      const response = await axios.post(`${url}/api/food/remove`, { id: foodId },{headers:{token,'ngrok-skip-browser-warning': 'true'}});
       await fetchList(); // Refreshing the list after removal
       if (response.data.success) {
         toast.success("Product Removed Successfully");
