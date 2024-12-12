@@ -31,7 +31,9 @@ const Cart = () => {
               <div  key={index}>
                 {/* Displaying each cart item */}
                 <div className=' grid grid-cols-3 md:grid-cols-6 '>
-                  {item.image?<img src={url + "/images/" + item.image} className='w-[50px]' alt='item'></img>:<img src={assets.food1} alt='food'/>}
+                  {/* <img src={url + "/images/" + item.image} className='w-[50px]' alt='item'/>*/}
+
+                  <img src={assets.food1} alt='food'/> 
                   <p>{item.name}</p>
                   <p>${item.price}</p>
                   <p>{cartItem[item._id]}</p>
