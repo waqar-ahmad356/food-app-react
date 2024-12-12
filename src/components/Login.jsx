@@ -38,7 +38,7 @@ const Login = () => {
         ? { email: formData.email, password: formData.password } // Login payload
         : formData; // Sign Up payload
 
-      const { data } = await axios.post(newurl, payload,
+      const { data } = await axios.post(newurl, payload,{headers:{'ngrok-skip-browser-warning': 'true'}}
        
         
       );
