@@ -34,7 +34,7 @@ const CreateProduct = () => {
 
         
         try {
-            const response = await axios.post(`${url}/api/food/add`, formData,{headers:{token}});
+            const response = await axios.post(`${url}/api/food/add`, formData,{headers:{token,'ngrok-skip-browser-warning': 'true'}});
             if (response.data.success) {
                 
                 setData({

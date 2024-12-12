@@ -15,7 +15,7 @@ const Orders = () => {
   // Function to fetch all orders from the backend
   const fetchAllOrders = async () => {
     try {
-      const response = await axios.get(`${url}/api/order/list`,{headers:{token}});
+      const response = await axios.get(`${url}/api/order/list`,{headers:{token,'ngrok-skip-browser-warning': 'true'}});
       if (response.data.success) {
         setOrders(response.data.data); 
       } else {
@@ -33,7 +33,7 @@ const Orders = () => {
       const response = await axios.post(`${url}/api/order/status`, {
         orderId,
         status: e.target.value
-      },{headers:{token}});
+      },{headers:{token,'ngrok-skip-browser-warning': 'true'}});
       if (response.data.success) {
         await fetchAllOrders(); 
       }

@@ -25,7 +25,7 @@ const MyOrders = () => {
         url + "/api/order/user-orders",
         {},
         {
-          headers: { token },
+          headers: { token,'ngrok-skip-browser-warning': 'true' },
         }
       );
 
