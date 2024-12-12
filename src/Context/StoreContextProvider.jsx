@@ -43,7 +43,7 @@ const StoreContextProvider = ({children}) => {
               const response = await axios.post(
                   url + "/api/cart/add",
                   { userId, itemId },
-                  { headers: { token } }
+                  { headers: { token, 'ngrok-skip-browser-warning': 'true' } }
               );
               console.log("Cart update response:", response.data);
           } catch (error) {
@@ -82,7 +82,7 @@ const StoreContextProvider = ({children}) => {
           await axios.post(
             `${url}/api/cart/remove`,
             { itemId, userId }, // Pass userId along with itemId
-            { headers: { token } }
+            { headers: { token, 'ngrok-skip-browser-warning': 'true' } }
           );
           console.log("Item removed from cart");
         } catch (error) {
@@ -114,7 +114,7 @@ const StoreContextProvider = ({children}) => {
         const decodedToken = jwtDecode(token);
         const userId = decodedToken.id;
         console.log("userId", userId);
-        const response=await axios.get(url+"/api/cart/get",{userId},{headers:{token}})
+        const response=await axios.get(url+"/api/cart/get",{userId},{headers:{token, 'ngrok-skip-browser-warning': 'true'}})
         setCartItem(response.data.cartData)
     }
   }
@@ -124,7 +124,7 @@ const StoreContextProvider = ({children}) => {
         
         
     
-        const response = await axios.get(`${url}/api/food/list`)
+        const response = await axios.get(`${url}/api/food/list`,{headers:{ 'ngrok-skip-browser-warning': 'true',}})
         
     
         if (response.data && response.data.data) {
