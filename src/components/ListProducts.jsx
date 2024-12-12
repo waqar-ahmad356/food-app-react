@@ -3,6 +3,8 @@ import React, { useContext, useEffect, useState } from 'react';
 import axios from 'axios'; 
 import { toast } from 'react-toastify'; 
 import { StoreContext } from '../Context/StoreContextProvider';
+import assert from 'assert';
+import { assets } from '../assets/assets';
 
 const ListProduct = () => {
   const {url}=useContext(StoreContext)
@@ -64,7 +66,7 @@ const ListProduct = () => {
           return (
             <div key={index} className='grid grid-cols-5 gap-4'>
              
-              <img className='w-[150px]' src={`${url}/images/${item.image}`} alt='pic' />
+             {item.image?<img className='w-[150px]' src={`${url}/images/${item.image}`} alt='pic' />:<img src={assets.foo1} alt='food'/>} 
               <p>{item.name}</p>
               <p>{item.category}</p>
               <p>${item.price}</p>

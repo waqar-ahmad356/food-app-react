@@ -10,7 +10,7 @@ import remove_icon_red from './remove_icon_red.png';
 import add_icon_green from './add_icon_green.png'
 import basket_icon from './basket_icon.png';
 import header_img from './header_img.png';
-
+import food1 from './food1.png'
 export const assets ={
     logo,
     add_icon,
@@ -23,6 +23,7 @@ export const assets ={
     remove_icon_red,
     add_icon_green,
     basket_icon,
-    header_img
+    header_img,
+    food1
 }
 
