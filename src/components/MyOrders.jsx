@@ -39,7 +39,7 @@ const token=localStorage.getItem("token")
     if (token) {
       fetchOrders();
     }
-  }, [token]);
+  }, [token,data]);
 
   return (
     <div className="mt-[60px] px-[80px]">
