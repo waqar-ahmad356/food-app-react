@@ -66,7 +66,7 @@ const ListProduct = () => {
           return (
             <div key={index} className='grid grid-cols-5 gap-4'>
              
-             {item.image?<img className='w-[150px]' src={`${url}/images/${item.image}`} alt='pic' />:<img src={assets.foo1} alt='food'/>} 
+             {item.image?<img className='w-[150px]' src={`${url}/images/${item.image}`} alt='pic' />:<img src={assets.food1} alt='food'/>} 
               <p>{item.name}</p>
               <p>{item.category}</p>
               <p>${item.price}</p>
