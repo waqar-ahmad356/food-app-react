@@ -10,7 +10,8 @@ import { StoreContext } from '../Context/StoreContextProvider';
 
 const PlaceOrder = () => {
   
-  const { totalCartAmount, token, foodlist, cartItem, url } = useContext(StoreContext);
+  const { totalCartAmount, foodlist, cartItem, url } = useContext(StoreContext);
+  const token=localStorage.getItem("token");
 
   // State for form data
   const [data, setData] = useState({
@@ -54,7 +55,7 @@ const PlaceOrder = () => {
     };
 
     // Send order request
-    let response = await axios.post(url + '/api/order/place', orderData, { headers: { token } });
+    let response = await axios.post(url + '/api/order/place', orderData, { headers: { token,'ngrok-skip-browser-warning': 'true' } });
     if (response.data.success) {
       const { session_url } = response.data;
       window.location.replace(session_url);

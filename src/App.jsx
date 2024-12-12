@@ -14,11 +14,14 @@ import PlaceOrder from './components/PlaceOrder'
 import MyOrders from './components/MyOrders'
 import Verify from './components/Verify'
 import Orders from './components/Orders'
+import Page404 from './components/404Page'
+
 
 const App = () => {
   return (
    <>
    <Navbar/>
+  
    <ToastContainer/>
    <Routes>
      
@@ -31,6 +34,7 @@ const App = () => {
      <Route path='/verify' element={<ProtectedRoutes requiredRole="buyer"><Verify/></ProtectedRoutes>} />
      <Route path='/myorders' element={<ProtectedRoutes requiredRole="buyer"><MyOrders/></ProtectedRoutes>}/>
       <Route path='/login' element={<Login/>}/>
+      <Route path='*' element={<Page404/>}/>
      
     </Routes> 
    </>

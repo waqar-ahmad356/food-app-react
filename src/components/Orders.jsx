@@ -10,10 +10,11 @@ const Orders = () => {
  
 
   const [orders, setOrders] = useState([]); // State to store the list of orders
-  const {url,token}=useContext(StoreContext)
-
+  const {url}=useContext(StoreContext)
+  const token=localStorage.getItem("token")
   // Function to fetch all orders from the backend
   const fetchAllOrders = async () => {
+
     try {
       const response = await axios.get(`${url}/api/order/list`,{headers:{token,'ngrok-skip-browser-warning': 'true'}});
       if (response.data.success) {

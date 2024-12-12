@@ -13,7 +13,8 @@ const CreateProduct = () => {
         price: "",
         category: "Salad" // Default category
     });
-    const {url,token}=useContext(StoreContext)
+    const {url}=useContext(StoreContext);
+    const token=localStorage.getItem("token")
 
     // Function to handle changes in input fields
     const onChangeHandler = (e) => {

@@ -9,6 +9,7 @@ import add_icon_white from './add_icon_white.png'
 import remove_icon_red from './remove_icon_red.png';
 import add_icon_green from './add_icon_green.png'
 import basket_icon from './basket_icon.png';
+import header_img from './header_img.png';
 
 export const assets ={
     logo,
@@ -21,6 +22,7 @@ export const assets ={
     add_icon_white,
     remove_icon_red,
     add_icon_green,
-    basket_icon
+    basket_icon,
+    header_img
 }
 

@@ -15,9 +15,9 @@ import { assets } from "../assets/assets";
 const MyOrders = () => {
   // Define state variables using the useState hook
   const [data, setData] = useState([]);
-
+const token=localStorage.getItem("token")
   // Destructure the url and token from the StoreContext
-  const { url, token } = useContext(StoreContext);
+  const { url } = useContext(StoreContext);
 
   const fetchOrders = async () => {
     try {

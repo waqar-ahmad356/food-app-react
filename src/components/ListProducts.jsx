@@ -5,7 +5,8 @@ import { toast } from 'react-toastify';
 import { StoreContext } from '../Context/StoreContextProvider';
 
 const ListProduct = () => {
-  const {url,token}=useContext(StoreContext)
+  const {url}=useContext(StoreContext)
+  const token=localStorage.getItem("token");
   const[list , setList]=useState([])
 
 
