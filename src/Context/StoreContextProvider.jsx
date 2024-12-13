@@ -37,7 +37,7 @@ const StoreContextProvider = ({children}) => {
       if (token) {
           const decodedToken = jwtDecode(token);
           const userId = decodedToken.id;
-          console.log("userId", userId);
+          // console.log("userId", userId);
   
           try {
               const response = await axios.post(
@@ -75,7 +75,7 @@ const StoreContextProvider = ({children}) => {
       if (token) {
         const decodedToken = jwtDecode(token);
         const userId = decodedToken.id; 
-        console.log("userId", userId);
+        // console.log("userId", userId);
     
         try {
           // Send the itemId and userId to the server for cart update
@@ -93,27 +93,38 @@ const StoreContextProvider = ({children}) => {
     
     
     //get the total cart amount
-    const totalCartAmount=()=>{
-      let totalAmount=0;
-      for(const itemId in cartItem){
-        if(cartItem[itemId]>0){
-          let itemInfo=foodlist.find((product)=>product._id===itemId)
-          if(itemInfo){
-            totalAmount+=itemInfo.price*cartItem[itemId]
-          }
-          else {
-            console.error(`Item with ID ${itemId} not found in food list.`);
-        }
+    const totalCartAmount = () => {
+      let totalAmount = 0;
+    
+      // Loop through each item in the cart
+      for (const itemId in cartItem) {
+        if (cartItem[itemId] > 0) {
+          // Ensure both itemId and product._id are compared as strings or both as numbers
+          const itemInfo = foodlist.find((product) => String(product._id) === String(itemId));
+    
+          // console.log(itemInfo); // Check the itemInfo to see if it's undefined or not
+    
+          if (itemInfo) {
+            // If itemInfo exists, calculate total price
+            totalAmount += itemInfo.price * cartItem[itemId];
+          } 
+          // else {
+          // //   // Log an error if the item is not found in foodlist
+          // //   console.error(`Item with ID ${itemId} not found in food list.`);
+          // // }
         }
       }
+    
+      // console.log('Total Amount:', totalAmount); // Log the totalAmount to ensure it's being calculated
       return totalAmount;
-    }
+    };
+    
     //functionto load cart data from the server
     const loadCartData=async()=>{
       if (token) {
         const decodedToken = jwtDecode(token);
         const userId = decodedToken.id;
-        console.log("userId", userId);
+        // console.log("userId", userId);
         const response=await axios.get(url+"/api/cart/get",{userId},{headers:{token, 'ngrok-skip-browser-warning': 'true'}})
         setCartItem(response.data.cartData)
     }

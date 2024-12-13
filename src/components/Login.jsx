@@ -49,6 +49,7 @@ const Login = () => {
       
       if (isLogin && data.token) {
         const token = localStorage.setItem("token", data.token);
+        localStorage.setItem("name",data.name)
         const decodedToken = jwtDecode(data.token);
         localStorage.setItem("role", decodedToken.role);
 

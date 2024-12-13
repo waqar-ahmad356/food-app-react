@@ -11,6 +11,7 @@ import add_icon_green from './add_icon_green.png'
 import basket_icon from './basket_icon.png';
 import header_img from './header_img.png';
 import food1 from './food1.png'
+import profile_icon from './profile_icon.png'
 export const assets ={
     logo,
     add_icon,
@@ -24,6 +25,7 @@ export const assets ={
     add_icon_green,
     basket_icon,
     header_img,
-    food1
+    food1,
+    profile_icon
 }
 

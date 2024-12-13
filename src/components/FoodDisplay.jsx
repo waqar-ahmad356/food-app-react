@@ -12,9 +12,9 @@ const FoodDisplay = () => {
     <div className='lg:px-[80px] md:px-[60px] sm:px-[40px] px-[16px]'>
         <h2 className='font-bold text-[tomato] text-[30px]'>Delicious Food</h2>
         <div className='grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 mt-8'>
-            {foodlist.map((item,index)=>{
+            {foodlist.map((item)=>{
                 return(
-                        <FoodItems key={index} id={item._id} name={item.name}
+                        <FoodItems key={item._id} id={item._id} name={item.name}
                         description={item.description} price={item.price} image={item.image}/>
                 )
             })}
