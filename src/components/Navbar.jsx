@@ -139,7 +139,7 @@ const Navbar = () => {
                   <img
                     src={assets.profile_icon}
                     alt="User"
-                    className="w-[40px] h-[40px] rounded-full"
+                    className="w-[40px] h-[40px] object-contain rounded-full"
                   />
                   <span className="font-semibold uppercase text-[#ec1109ef]">{username}</span>
                 </div>
