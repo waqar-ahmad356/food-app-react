@@ -9,7 +9,8 @@ const Verify = () => {
     const success=searchParams.get("success");
     const orderId=searchParams.get("orderId");
 
-    const {url,token,setCartItem}=useContext(StoreContext);
+    const {url,setCartItem}=useContext(StoreContext);
+    const token=localStorage.getItem("token");
 
     const navigate=useNavigate();
 

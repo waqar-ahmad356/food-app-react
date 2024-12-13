@@ -49,7 +49,7 @@ const token=localStorage.getItem("token")
           return (
             <div
               key={index}
-              className="grid grid-cols-[0.5fr_2fr_1fr_1fr_1fr_1fr] gap-7 text-[#454545] items-center border px-[20px] py-[10px] border-[tomato]"
+              className="grid grid-cols-1 md:grid-cols-[0.5fr_2fr_1fr_1fr_1fr_1fr] gap-7 text-[#454545] items-center border px-[20px] py-[10px] border-[tomato]"
             >
               <img className="w-[50px]" src={assets.parcel_icon} alt="icon" />
 
