@@ -3,13 +3,14 @@ import React, { useContext, useEffect, useState } from 'react';
 import axios from 'axios'; 
 import { toast } from 'react-toastify'; 
 import { StoreContext } from '../Context/StoreContextProvider';
-import assert from 'assert';
+
 import { assets } from '../assets/assets';
 
 const ListProduct = () => {
   const {url}=useContext(StoreContext)
   const token=localStorage.getItem("token");
   const[list , setList]=useState([])
+  const [tooltipVisible, setTooltipVisible] = useState(false);
 
 
  
@@ -51,15 +52,15 @@ const ListProduct = () => {
 
   return (
     <div className='lg:px-[80px] md:px-[60px] sm:px-[40px] px-[16px] flex flex-col gap-3'>
-      <p>All Food List</p>
+      <p className='text-[30px] text-[tomato]'>All Food List</p>
       <div className='flex flex-col gap-5'>
        
         <div className='grid grid-cols-4'>
-          <b>Image</b>
-          <b>Name</b>
+          <b className='text-[14] text-[#ec4236]'>Image</b>
+          <b className='text-[14] text-[#ec4236]'>Name</b>
           {/* <b>Category</b> */}
-          <b>Price</b>
-          <b>Action</b>
+          <b className='text-[14] text-[#ec4236]'>Price</b>
+          <b className='text-[14] text-[#ec4236]'>Action</b>
         </div>
        
         {list.map((item, index) => {
@@ -72,7 +73,15 @@ const ListProduct = () => {
               {/* <p>{item.category}</p> */}
               <p>${item.price}</p>
              
-              <p className='cursor-pointer' onClick={() => removeFood(item._id)}>X</p>
+              <p
+        className="cursor-pointer text-[red] relative text-[20px] group"
+        onClick={() => removeFood(item._id)}
+      >
+        X
+        <span className="absolute left-[20px] text-[12px] invisible w-[120px] bg-[tomato] text-white text-center py-[5px] rounded-[6px] group-hover:visible z-10">
+          Delete the product
+        </span>
+      </p>
             </div>
           );
         })}
