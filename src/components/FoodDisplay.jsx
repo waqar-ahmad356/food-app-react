@@ -9,9 +9,9 @@ const FoodDisplay = () => {
   return (
     <div>
      <Hero/>
-    <div className='lg:px-[80px]'>
+    <div className='lg:px-[80px] md:px-[60px] sm:px-[40px] px-[16px]'>
         <h2 className='font-bold text-[tomato] text-[30px]'>Delicious Food</h2>
-        <div className='grid grid-cols-3 gap-6 mt-8'>
+        <div className='grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 mt-8'>
             {foodlist.map((item,index)=>{
                 return(
                         <FoodItems key={index} id={item._id} name={item.name}

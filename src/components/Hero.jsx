@@ -3,9 +3,9 @@ import {assets} from '../assets/assets'
 
 const Hero = () => {
   return (
-    <div className='px-[80px]'>
+    <div className='lg:px-[80px] md:px-[60px] sm:px-[40px] px-[16px]'>
     <div >
-        <img  src={assets.header_img} alt='hero'/>
+        <img className='max-w-full h-auto ' src={assets.header_img} alt='hero'/>
     </div>
       
     </div>

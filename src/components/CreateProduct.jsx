@@ -59,7 +59,7 @@ const CreateProduct = () => {
     }
 
     return (
-        <div className='px-[80px] mt-[40px] w-[50%] pb-8'>
+        <div className='lg:px-[80px] md:px-[60px] sm:px-[40px] px-[16px] mt-[40px] md:w-[50%] w-[100%]  pb-8'>
            
             <form className='flex flex-col gap-3' onSubmit={onSubmitHandler}>
            

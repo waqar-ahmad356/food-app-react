@@ -50,26 +50,26 @@ const ListProduct = () => {
   };
 
   return (
-    <div className='px-[80px] flex flex-col gap-3'>
+    <div className='lg:px-[80px] md:px-[60px] sm:px-[40px] px-[16px] flex flex-col gap-3'>
       <p>All Food List</p>
       <div className='flex flex-col gap-5'>
        
-        <div className='grid grid-cols-5'>
+        <div className='grid grid-cols-4'>
           <b>Image</b>
           <b>Name</b>
-          <b>Category</b>
+          {/* <b>Category</b> */}
           <b>Price</b>
           <b>Action</b>
         </div>
        
         {list.map((item, index) => {
           return (
-            <div key={index} className='grid grid-cols-5 gap-4'>
+            <div key={index} className='grid grid-cols-4 gap-4'>
              
              {/* <img className='w-[150px]' src={`${url}/images/${item.image}`} alt='pic' /> */}
              <img className='w-[150px]'  src={assets.food1} alt='food'/> 
               <p>{item.name}</p>
-              <p>{item.category}</p>
+              {/* <p>{item.category}</p> */}
               <p>${item.price}</p>
              
               <p className='cursor-pointer' onClick={() => removeFood(item._id)}>X</p>

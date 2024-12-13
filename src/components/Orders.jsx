@@ -50,13 +50,13 @@ const Orders = () => {
   }, [token]);
 
   return (
-    <div className='px-[80px] mt-[60px]'>
+    <div className='lg:px-[80px] md:px-[60px] sm:px-[40px] px-[16px] mt-[60px]'>
       <h3 className='text-[30px] font-bold text-[tomato] mb-[30px]'>Order Page</h3>
       <div className=' flex flex-col gap-6'>
        
         {orders.map((order, index) => {
           return (
-            <div key={index} className='grid grid-cols-[0.5fr_2fr_1fr_1fr_1fr] gap-7 text-[#454545] items-center border px-[20px] py-[10px] border-[tomato]'>
+            <div key={index} className='grid grid-cols-1 lg:grid-cols-[0.5fr_2fr_1fr_1fr_1fr] gap-7 text-[#454545] items-center border px-[20px] py-[10px] border-[tomato]'>
               
               <img src={assets.parcel_icon} alt='icon'></img>
               <div >
