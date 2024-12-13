@@ -52,7 +52,7 @@ const Navbar = () => {
         <ul className="flex items-center list-none gap-4">
           {!isLoggedIn ? (
             <li>
-              <Link to="/login" className="px-6 py-3 font-semibold text-[18px] rounded-3xl bg-[#c4582d] border border-[#c4582d] hover:bg-white hover:text-[#c4582d] text-white">Login</Link>
+              <Link to="/login" className="px-6 py-3 font-semibold text-[18px] rounded-3xl bg-[tomato] border border-[tomato] hover:bg-white hover:text-[tomato] text-white">Login</Link>
             </li>
           ) : (
             <>
@@ -90,7 +90,7 @@ const Navbar = () => {
               <li>
                 <button
                   onClick={handleLogout}
-                  className="px-6 py-3 font-semibold text-[18px] rounded-3xl bg-[#c4582d] border border-[#c4582d] hover:bg-white hover:text-[#c4582d] text-white"
+                  className="px-6 py-3 font-semibold text-[18px] rounded-3xl bg-[tomato] border border-[tomato] hover:bg-white hover:text-[tomato] text-white"
                 >
                   Logout
                 </button>

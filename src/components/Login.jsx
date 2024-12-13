@@ -75,7 +75,7 @@ const Login = () => {
 
   return (
     <div className="min-h-screen lg:px-[80px] md:px-[60px] sm:px-[40px] px-[16px] bg-gray-100 flex items-center justify-center">
-      <div className="bg-white p-8 rounded shadow-md w-full max-w-md">
+      <div className="bg-white p-8 rounded-3xl shadow-md w-full max-w-md">
         <h2 className="text-2xl font-bold text-center mb-6">
           {isLogin ? "Login" : "Sign Up"}
         </h2>
@@ -158,13 +158,13 @@ const Login = () => {
 
           <button
             type="submit"
-            className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition"
+            className="w-full bg-[tomato] text-white py-2 rounded hover:bg-[#ec4236] transition"
           >
             {isLogin ? "Login" : "Sign Up"}
           </button>
         </form>
 
-        <p className="text-center text-gray-600 text-[12px] mt-4">
+        <p className="text-center text-gray-600 text-[12px] sm:text-[16px] mt-4">
           {isLogin ? "Don't have an account?" : "Already have an account?"}{" "}
           <button 
             onClick={toggleForm}
