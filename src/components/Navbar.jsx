@@ -60,7 +60,7 @@ const Navbar = () => {
               {userRole === "buyer" && (
                <>
               <li>
-                <Link to="/myorders" className="font-semibold sm:text-[18px] text-[12px]  text-[#c4582d]">My Orders</Link>
+                <Link to="/myorders" className="font-semibold sm:text-[18px] text-[12px]  text-[#ec4236]">My Orders</Link>
               </li>
                 <li>
                 <div className='relative'> {/* Container for basket icon */}
@@ -77,13 +77,13 @@ const Navbar = () => {
                 <>
                   
                   <li>
-                    <Link to="/create-product" className="font-semibold sm:text-[18px] text-[12px]  text-[#c4582d]">Create Product</Link>
+                    <Link to="/create-product" className="font-semibold sm:text-[18px] text-[12px]  text-[#ec4236]">Create Product</Link>
                   </li>
                   <li>
-                    <Link to="/list-products" className="font-semibold sm:text-[18px] text-[12px] text-[#c4582d]">List of Products</Link>
+                    <Link to="/list-products" className="font-semibold sm:text-[18px] text-[12px] text-[#ec4236]">List of Products</Link>
                   </li>
                   <li>
-                    <Link to="/order-list" className="font-semibold sm:text-[18px] text-[12px] text-[#c4582d]">Orders</Link>
+                    <Link to="/order-list" className="font-semibold sm:text-[18px] text-[12px] text-[#ec4236]">Orders</Link>
                   </li>
                 </>
               )}

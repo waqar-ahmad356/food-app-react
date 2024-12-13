@@ -24,12 +24,12 @@ const FoodItems = ({id,name,description,price,image}) => {
             </div>
             <div className='p-[20px] flex flex-col gap-3'> 
                 <div className='flex flex-col gap-2' > 
-                    <p className='text-[20px] font-semibold'>{name}</p> 
+                    <p className='text-[20px] font-semibold text-[#ec4236]'>{name}</p> 
                     <div>
                     <img src={assets.rating_stars} alt='rating'/>
                     </div>
                 </div>
-                <p className='text-[12px] font-medium'>{description}</p> 
+                <p className='text-[14px] font-medium'>{description}</p> 
                 <p className='font-bold'>${price}</p> 
            
             </div>
