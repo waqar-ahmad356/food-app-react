@@ -42,7 +42,7 @@ const token=localStorage.getItem("token")
   }, [token,data]);
 
   return (
-    <div className="mt-[60px] px-[80px]">
+    <div className="mt-[60px] lg:px-[80px] md:px-[60px] sm:px-[40px] px-[16px]">
       <h2 className="font-bold text-[30px]">My Orders</h2>
       <div className="flex flex-col gap-4 mt-[30px]">
         {data.map((order, index) => {

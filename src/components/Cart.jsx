@@ -11,8 +11,8 @@ const Cart = () => {
   const navigate = useNavigate();
 
   return (
-    <div className='mt-[100px] mb-[50px] px-[80px]'>
-      <div className='cart-items'>
+    <div className='md:mt-[100px] mt-[30px] lg:px-[80px] md:px-[60px] sm:px-[40px] px-[16px] mb-[50px] '>
+      <div >
         {/* Displaying cart items with details */}
         <div className='grid md:grid-cols-6 grid-cols-3'>
           <p>Items</p>

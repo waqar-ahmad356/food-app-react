@@ -74,7 +74,7 @@ const Login = () => {
   
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+    <div className="min-h-screen lg:px-[80px] md:px-[60px] sm:px-[40px] px-[16px] bg-gray-100 flex items-center justify-center">
       <div className="bg-white p-8 rounded shadow-md w-full max-w-md">
         <h2 className="text-2xl font-bold text-center mb-6">
           {isLogin ? "Login" : "Sign Up"}
@@ -164,7 +164,7 @@ const Login = () => {
           </button>
         </form>
 
-        <p className="text-center text-gray-600 mt-4">
+        <p className="text-center text-gray-600 text-[12px] mt-4">
           {isLogin ? "Don't have an account?" : "Already have an account?"}{" "}
           <button 
             onClick={toggleForm}

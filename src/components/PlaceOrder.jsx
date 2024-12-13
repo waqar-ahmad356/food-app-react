@@ -80,7 +80,7 @@ const PlaceOrder = () => {
 
   // Render the PlaceOrder component
   return (
-    <form className='px-[80px] w-full flex justify-between flex-wrap  mt-[60px] ' onSubmit={placeOrder}>
+    <form className='lg:px-[80px] md:px-[60px] sm:px-[40px] px-[16px] w-full flex justify-between flex-wrap  mt-[60px] ' onSubmit={placeOrder}>
       <div className='w-full max-w-[500px] flex flex-col gap-3'>
         <p className='text-[30px] font-bold mb-[40px]'>Delivery Information</p>
         <div className='flex gap-3'>
@@ -101,7 +101,7 @@ const PlaceOrder = () => {
       </div>
       <div className='w-full max-w-[500px] mt-[100px]'>
         <div className='flex flex-col gap-6'>
-          <h2>Cart Totals</h2>
+          <h2 className='font-bold text-[20px]'>Cart Totals</h2>
           <div className='flex flex-col gap-6'>
             <div className='flex justify-between '>
               <p>Sub Total</p>
