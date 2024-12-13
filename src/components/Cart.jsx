@@ -14,7 +14,7 @@ const Cart = () => {
     <div className='md:mt-[100px] mt-[30px] lg:px-[80px] md:px-[60px] sm:px-[40px] px-[16px] mb-[50px] '>
       <div >
         {/* Displaying cart items with details */}
-        <div className='grid md:grid-cols-6 grid-cols-3'>
+        <div className='grid sm:grid-cols-6 grid-cols-3'>
           <p>Items</p>
           <p>Title</p>
           <p>Price</p>
@@ -30,7 +30,7 @@ const Cart = () => {
             return (
               <div  key={index}>
                 {/* Displaying each cart item */}
-                <div className=' grid grid-cols-3 md:grid-cols-6 '>
+                <div className=' grid grid-cols-3 sm:grid-cols-6 '>
                   {/* <img src={url + "/images/" + item.image} className='w-[50px]' alt='item'/>*/}
 
                   <img src={assets.food1} className='w-[50px]' alt='food'/> 
