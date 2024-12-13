@@ -141,7 +141,7 @@ const Navbar = () => {
                     alt="User"
                     className="w-[40px] h-[40px] rounded-full"
                   />
-                  <span className="font-semibold">{username}</span>
+                  <span className="font-semibold uppercase text-[#ec1109ef]">{username}</span>
                 </div>
                 {isDropdownVisible && (
                   <div className="absolute right-0 mt-1 w-40 bg-white text-black rounded shadow-lg z-20">
