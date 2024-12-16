@@ -12,7 +12,7 @@ const StoreContextProvider = ({children}) => {
         const storedCart=localStorage.getItem("cart");
         return storedCart?JSON.parse(storedCart):{}
     })
-    const url="https://b9fe-203-99-174-147.ngrok-free.app";
+    const url="https://60c8-203-99-174-147.ngrok-free.app";
    
 
 
